@@ -1,0 +1,5 @@
+rabbitmq:
+  image: rabbitmq-with-delayed-message-exchange
+  ports:
+    - "5672:5672"
+    - "15672:15672"

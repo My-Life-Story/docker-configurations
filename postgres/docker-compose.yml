@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: u_mls_admin
+      POSTGRES_PASSWORD: welcome1
+      POSTGRES_DB: postgres
+    volumes:
+      - "./scripts:/docker-entrypoint-initdb.d"
+      - "/var/lib/postgresql"
+    ports:
+      - "5432:5432"
